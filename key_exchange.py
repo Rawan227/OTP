@@ -10,4 +10,4 @@ class DiffieHellman:
 
     def compute_shared_key(self, other_public):
         shared = pow(other_public, self.private_key, self.p)
-        return hashlib.sha256(str(shared).encode()).digest()[:16]  # AES-128 key
+        return hashlib.sha256(str(shared).encode()).digest()[:16]

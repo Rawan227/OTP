@@ -13,7 +13,7 @@ class LCG:
 
     def next(self):
         self.state = (LCG_A * self.state + LCG_C) % LCG_M
-        return self.state & 0xFF
+        return self.state
 
     def generate_keystream(self, length):
         return bytes([self.next() for _ in range(length)])
